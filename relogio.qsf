@@ -56,7 +56,6 @@ set_global_assignment -name VHDL_FILE mux.vhd
 set_global_assignment -name VHDL_FILE relogio.vhd
 set_global_assignment -name VHDL_FILE registrador.vhd
 set_global_assignment -name VHDL_FILE ula.vhd
-set_global_assignment -name BDF_FILE diagrama_de_blocos_relogio.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf

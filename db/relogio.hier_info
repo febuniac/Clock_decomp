@@ -1,103 +1,81 @@
 |diagrama_de_blocos_relogio
-out_mux_reg[0] <= mux_6x1:mux_dos_registradores.Y[0]
-out_mux_reg[1] <= mux_6x1:mux_dos_registradores.Y[1]
-out_mux_reg[2] <= mux_6x1:mux_dos_registradores.Y[2]
-out_mux_reg[3] <= mux_6x1:mux_dos_registradores.Y[3]
-out_mux_reg[4] <= mux_6x1:mux_dos_registradores.Y[4]
-CLK => registrador:US.clk
-CLK => ula:inst.clk
-CLK => registrador:DS.clk
-CLK => registrador:UM.clk
-CLK => registrador:DM.clk
-CLK => registrador:UH.clk
-CLK => registrador:DH.clk
-reg1_enable => registrador:US.enable
-v_1[0] => mux_6x1:mux_das_constantes.A[0]
-v_1[1] => mux_6x1:mux_das_constantes.A[1]
-v_1[2] => mux_6x1:mux_das_constantes.A[2]
-v_1[3] => mux_6x1:mux_das_constantes.A[3]
-v_1[4] => mux_6x1:mux_das_constantes.A[4]
-mux_abs_control[0] => mux_6x1:mux_das_constantes.SEL[0]
-mux_abs_control[1] => mux_6x1:mux_das_constantes.SEL[1]
-mux_abs_control[2] => mux_6x1:mux_das_constantes.SEL[2]
-mux_abs_control[3] => mux_6x1:mux_das_constantes.SEL[3]
-ula_control[0] => ula:inst.func[0]
-ula_control[1] => ula:inst.func[1]
-mux_reg_control[0] => mux_6x1:mux_dos_registradores.SEL[0]
-mux_reg_control[1] => mux_6x1:mux_dos_registradores.SEL[1]
-mux_reg_control[2] => mux_6x1:mux_dos_registradores.SEL[2]
-mux_reg_control[3] => mux_6x1:mux_dos_registradores.SEL[3]
-out_ula[0] <= ula:inst.Q[0]
-out_ula[1] <= ula:inst.Q[1]
-out_ula[2] <= ula:inst.Q[2]
-out_ula[3] <= ula:inst.Q[3]
-out_ula[4] <= ula:inst.Q[4]
-reg_us[0] <= registrador:US.q[0]
-reg_us[1] <= registrador:US.q[1]
-reg_us[2] <= registrador:US.q[2]
-reg_us[3] <= registrador:US.q[3]
-reg_us[4] <= registrador:US.q[4]
+CLK => registrador:b2v_DH.clk
+CLK => registrador:b2v_DM.clk
+CLK => registrador:b2v_DS.clk
+CLK => ula:b2v_inst.clk
+CLK => registrador:b2v_UH.clk
+CLK => registrador:b2v_UM.clk
+CLK => registrador:b2v_US.clk
+reg_us_reset => registrador:b2v_US.reset
+reg_us_enable => registrador:b2v_US.enable
+reg_ds_reset => registrador:b2v_DS.reset
+reg_ds_enable => registrador:b2v_DS.enable
+reg_um_reset => registrador:b2v_UM.reset
+reg_um_enable => registrador:b2v_UM.enable
+reg_dm_reset => registrador:b2v_DM.reset
+reg_dm_enable => registrador:b2v_DM.enable
+reg_dh_enable => registrador:b2v_DH.enable
+reg_dh_reset => registrador:b2v_DH.reset
+reg_uh_enable => registrador:b2v_UH.enable
+reg_uh_reset => registrador:b2v_UH.reset
+mux_abs_control[0] => mux_6x1:b2v_mux_das_constantes.SEL[0]
+mux_abs_control[1] => mux_6x1:b2v_mux_das_constantes.SEL[1]
+mux_abs_control[2] => mux_6x1:b2v_mux_das_constantes.SEL[2]
+mux_abs_control[3] => mux_6x1:b2v_mux_das_constantes.SEL[3]
+mux_reg_control[0] => mux_6x1:b2v_mux_dos_registradores.SEL[0]
+mux_reg_control[1] => mux_6x1:b2v_mux_dos_registradores.SEL[1]
+mux_reg_control[2] => mux_6x1:b2v_mux_dos_registradores.SEL[2]
+mux_reg_control[3] => mux_6x1:b2v_mux_dos_registradores.SEL[3]
+ula_control[0] => ula:b2v_inst.func[0]
+ula_control[1] => ula:b2v_inst.func[1]
+v_0[0] => mux_6x1:b2v_mux_das_constantes.F[0]
+v_0[1] => mux_6x1:b2v_mux_das_constantes.F[1]
+v_0[2] => mux_6x1:b2v_mux_das_constantes.F[2]
+v_0[3] => mux_6x1:b2v_mux_das_constantes.F[3]
+v_0[4] => mux_6x1:b2v_mux_das_constantes.F[4]
+v_1[0] => mux_6x1:b2v_mux_das_constantes.A[0]
+v_1[1] => mux_6x1:b2v_mux_das_constantes.A[1]
+v_1[2] => mux_6x1:b2v_mux_das_constantes.A[2]
+v_1[3] => mux_6x1:b2v_mux_das_constantes.A[3]
+v_1[4] => mux_6x1:b2v_mux_das_constantes.A[4]
+v_2[0] => mux_6x1:b2v_mux_das_constantes.B[0]
+v_2[1] => mux_6x1:b2v_mux_das_constantes.B[1]
+v_2[2] => mux_6x1:b2v_mux_das_constantes.B[2]
+v_2[3] => mux_6x1:b2v_mux_das_constantes.B[3]
+v_2[4] => mux_6x1:b2v_mux_das_constantes.B[4]
+v_4[0] => mux_6x1:b2v_mux_das_constantes.C[0]
+v_4[1] => mux_6x1:b2v_mux_das_constantes.C[1]
+v_4[2] => mux_6x1:b2v_mux_das_constantes.C[2]
+v_4[3] => mux_6x1:b2v_mux_das_constantes.C[3]
+v_4[4] => mux_6x1:b2v_mux_das_constantes.C[4]
+v_6[0] => mux_6x1:b2v_mux_das_constantes.D[0]
+v_6[1] => mux_6x1:b2v_mux_das_constantes.D[1]
+v_6[2] => mux_6x1:b2v_mux_das_constantes.D[2]
+v_6[3] => mux_6x1:b2v_mux_das_constantes.D[3]
+v_6[4] => mux_6x1:b2v_mux_das_constantes.D[4]
+v_9[0] => mux_6x1:b2v_mux_das_constantes.E[0]
+v_9[1] => mux_6x1:b2v_mux_das_constantes.E[1]
+v_9[2] => mux_6x1:b2v_mux_das_constantes.E[2]
+v_9[3] => mux_6x1:b2v_mux_das_constantes.E[3]
+v_9[4] => mux_6x1:b2v_mux_das_constantes.E[4]
+out_mux_reg[0] <= mux_6x1:b2v_mux_dos_registradores.Y[0]
+out_mux_reg[1] <= mux_6x1:b2v_mux_dos_registradores.Y[1]
+out_mux_reg[2] <= mux_6x1:b2v_mux_dos_registradores.Y[2]
+out_mux_reg[3] <= mux_6x1:b2v_mux_dos_registradores.Y[3]
+out_mux_reg[4] <= mux_6x1:b2v_mux_dos_registradores.Y[4]
+out_ula[0] <= ula:b2v_inst.Q[0]
+out_ula[1] <= ula:b2v_inst.Q[1]
+out_ula[2] <= ula:b2v_inst.Q[2]
+out_ula[3] <= ula:b2v_inst.Q[3]
+out_ula[4] <= ula:b2v_inst.Q[4]
+reg_us[0] <= registrador:b2v_US.q[0]
+reg_us[1] <= registrador:b2v_US.q[1]
+reg_us[2] <= registrador:b2v_US.q[2]
+reg_us[3] <= registrador:b2v_US.q[3]
+reg_us[4] <= registrador:b2v_US.q[4]
 
 
-|diagrama_de_blocos_relogio|mux_6x1:mux_dos_registradores
-SEL[0] => Mux0.IN13
-SEL[0] => Mux1.IN13
-SEL[0] => Mux2.IN13
-SEL[0] => Mux3.IN13
-SEL[0] => Mux4.IN13
-SEL[1] => Mux0.IN12
-SEL[1] => Mux1.IN12
-SEL[1] => Mux2.IN12
-SEL[1] => Mux3.IN12
-SEL[1] => Mux4.IN12
-SEL[2] => Mux0.IN11
-SEL[2] => Mux1.IN11
-SEL[2] => Mux2.IN11
-SEL[2] => Mux3.IN11
-SEL[2] => Mux4.IN11
-SEL[3] => Mux0.IN10
-SEL[3] => Mux1.IN10
-SEL[3] => Mux2.IN10
-SEL[3] => Mux3.IN10
-SEL[3] => Mux4.IN10
-A[0] => Mux4.IN14
-A[1] => Mux3.IN14
-A[2] => Mux2.IN14
-A[3] => Mux1.IN14
-A[4] => Mux0.IN14
-B[0] => Mux4.IN15
-B[1] => Mux3.IN15
-B[2] => Mux2.IN15
-B[3] => Mux1.IN15
-B[4] => Mux0.IN15
-C[0] => Mux4.IN16
-C[1] => Mux3.IN16
-C[2] => Mux2.IN16
-C[3] => Mux1.IN16
-C[4] => Mux0.IN16
-D[0] => Mux4.IN17
-D[1] => Mux3.IN17
-D[2] => Mux2.IN17
-D[3] => Mux1.IN17
-D[4] => Mux0.IN17
-E[0] => Mux4.IN18
-E[1] => Mux3.IN18
-E[2] => Mux2.IN18
-E[3] => Mux1.IN18
-E[4] => Mux0.IN18
-F[0] => Mux4.IN19
-F[1] => Mux3.IN19
-F[2] => Mux2.IN19
-F[3] => Mux1.IN19
-F[4] => Mux0.IN19
-Y[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-Y[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-Y[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-Y[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-Y[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|diagrama_de_blocos_relogio|registrador:US
+|diagrama_de_blocos_relogio|registrador:b2v_DH
 d[0] => q[0]~reg0.DATAIN
 d[1] => q[1]~reg0.DATAIN
 d[2] => q[2]~reg0.DATAIN
@@ -125,7 +103,63 @@ q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|diagrama_de_blocos_relogio|ula:inst
+|diagrama_de_blocos_relogio|registrador:b2v_DM
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+enable => q[4]~reg0.ENA
+enable => q[3]~reg0.ENA
+enable => q[2]~reg0.ENA
+enable => q[1]~reg0.ENA
+enable => q[0]~reg0.ENA
+reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.ACLR
+reset => q[4]~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|diagrama_de_blocos_relogio|registrador:b2v_DS
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+enable => q[4]~reg0.ENA
+enable => q[3]~reg0.ENA
+enable => q[2]~reg0.ENA
+enable => q[1]~reg0.ENA
+enable => q[0]~reg0.ENA
+reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.ACLR
+reset => q[4]~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|diagrama_de_blocos_relogio|ula:b2v_inst
 clk => flag~reg0.CLK
 clk => R3[0].CLK
 clk => R3[1].CLK
@@ -166,7 +200,7 @@ Q[3] <= R3[3].DB_MAX_OUTPUT_PORT_TYPE
 Q[4] <= R3[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|diagrama_de_blocos_relogio|mux_6x1:mux_das_constantes
+|diagrama_de_blocos_relogio|mux_6x1:b2v_mux_das_constantes
 SEL[0] => Mux0.IN13
 SEL[0] => Mux1.IN13
 SEL[0] => Mux2.IN13
@@ -224,7 +258,65 @@ Y[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Y[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|diagrama_de_blocos_relogio|registrador:DS
+|diagrama_de_blocos_relogio|mux_6x1:b2v_mux_dos_registradores
+SEL[0] => Mux0.IN13
+SEL[0] => Mux1.IN13
+SEL[0] => Mux2.IN13
+SEL[0] => Mux3.IN13
+SEL[0] => Mux4.IN13
+SEL[1] => Mux0.IN12
+SEL[1] => Mux1.IN12
+SEL[1] => Mux2.IN12
+SEL[1] => Mux3.IN12
+SEL[1] => Mux4.IN12
+SEL[2] => Mux0.IN11
+SEL[2] => Mux1.IN11
+SEL[2] => Mux2.IN11
+SEL[2] => Mux3.IN11
+SEL[2] => Mux4.IN11
+SEL[3] => Mux0.IN10
+SEL[3] => Mux1.IN10
+SEL[3] => Mux2.IN10
+SEL[3] => Mux3.IN10
+SEL[3] => Mux4.IN10
+A[0] => Mux4.IN14
+A[1] => Mux3.IN14
+A[2] => Mux2.IN14
+A[3] => Mux1.IN14
+A[4] => Mux0.IN14
+B[0] => Mux4.IN15
+B[1] => Mux3.IN15
+B[2] => Mux2.IN15
+B[3] => Mux1.IN15
+B[4] => Mux0.IN15
+C[0] => Mux4.IN16
+C[1] => Mux3.IN16
+C[2] => Mux2.IN16
+C[3] => Mux1.IN16
+C[4] => Mux0.IN16
+D[0] => Mux4.IN17
+D[1] => Mux3.IN17
+D[2] => Mux2.IN17
+D[3] => Mux1.IN17
+D[4] => Mux0.IN17
+E[0] => Mux4.IN18
+E[1] => Mux3.IN18
+E[2] => Mux2.IN18
+E[3] => Mux1.IN18
+E[4] => Mux0.IN18
+F[0] => Mux4.IN19
+F[1] => Mux3.IN19
+F[2] => Mux2.IN19
+F[3] => Mux1.IN19
+F[4] => Mux0.IN19
+Y[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|diagrama_de_blocos_relogio|registrador:b2v_UH
 d[0] => q[0]~reg0.DATAIN
 d[1] => q[1]~reg0.DATAIN
 d[2] => q[2]~reg0.DATAIN
@@ -252,7 +344,7 @@ q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|diagrama_de_blocos_relogio|registrador:UM
+|diagrama_de_blocos_relogio|registrador:b2v_UM
 d[0] => q[0]~reg0.DATAIN
 d[1] => q[1]~reg0.DATAIN
 d[2] => q[2]~reg0.DATAIN
@@ -280,63 +372,7 @@ q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|diagrama_de_blocos_relogio|registrador:DM
-d[0] => q[0]~reg0.DATAIN
-d[1] => q[1]~reg0.DATAIN
-d[2] => q[2]~reg0.DATAIN
-d[3] => q[3]~reg0.DATAIN
-d[4] => q[4]~reg0.DATAIN
-clk => q[0]~reg0.CLK
-clk => q[1]~reg0.CLK
-clk => q[2]~reg0.CLK
-clk => q[3]~reg0.CLK
-clk => q[4]~reg0.CLK
-enable => q[4]~reg0.ENA
-enable => q[3]~reg0.ENA
-enable => q[2]~reg0.ENA
-enable => q[1]~reg0.ENA
-enable => q[0]~reg0.ENA
-reset => q[0]~reg0.ACLR
-reset => q[1]~reg0.ACLR
-reset => q[2]~reg0.ACLR
-reset => q[3]~reg0.ACLR
-reset => q[4]~reg0.ACLR
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|diagrama_de_blocos_relogio|registrador:UH
-d[0] => q[0]~reg0.DATAIN
-d[1] => q[1]~reg0.DATAIN
-d[2] => q[2]~reg0.DATAIN
-d[3] => q[3]~reg0.DATAIN
-d[4] => q[4]~reg0.DATAIN
-clk => q[0]~reg0.CLK
-clk => q[1]~reg0.CLK
-clk => q[2]~reg0.CLK
-clk => q[3]~reg0.CLK
-clk => q[4]~reg0.CLK
-enable => q[4]~reg0.ENA
-enable => q[3]~reg0.ENA
-enable => q[2]~reg0.ENA
-enable => q[1]~reg0.ENA
-enable => q[0]~reg0.ENA
-reset => q[0]~reg0.ACLR
-reset => q[1]~reg0.ACLR
-reset => q[2]~reg0.ACLR
-reset => q[3]~reg0.ACLR
-reset => q[4]~reg0.ACLR
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|diagrama_de_blocos_relogio|registrador:DH
+|diagrama_de_blocos_relogio|registrador:b2v_US
 d[0] => q[0]~reg0.DATAIN
 d[1] => q[1]~reg0.DATAIN
 d[2] => q[2]~reg0.DATAIN

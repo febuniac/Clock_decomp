@@ -1,5 +1,5 @@
 Analysis & Synthesis report for relogio
-Sun Sep 16 12:47:56 2018
+Sun Sep 16 23:50:28 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -10,20 +10,14 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: registrador:US
- 11. Parameter Settings for User Entity Instance: registrador:DS
- 12. Parameter Settings for User Entity Instance: registrador:UM
- 13. Parameter Settings for User Entity Instance: registrador:DM
- 14. Parameter Settings for User Entity Instance: registrador:UH
- 15. Parameter Settings for User Entity Instance: registrador:DH
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  5. Parameter Settings for User Entity Instance: registrador:b2v_DH
+  6. Parameter Settings for User Entity Instance: registrador:b2v_DM
+  7. Parameter Settings for User Entity Instance: registrador:b2v_DS
+  8. Parameter Settings for User Entity Instance: registrador:b2v_UH
+  9. Parameter Settings for User Entity Instance: registrador:b2v_UM
+ 10. Parameter Settings for User Entity Instance: registrador:b2v_US
+ 11. Port Connectivity Checks: "ula:b2v_inst"
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -47,27 +41,22 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Sep 16 12:47:56 2018       ;
-; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
-; Revision Name                   ; relogio                                     ;
-; Top-level Entity Name           ; diagrama_de_blocos_relogio                  ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 5                                           ;
-; Total pins                      ; 32                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Sun Sep 16 23:50:28 2018           ;
+; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name               ; relogio                                     ;
+; Top-level Entity Name       ; diagrama_de_blocos_relogio                  ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -174,172 +163,74 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; mux.vhd                          ; yes             ; User VHDL File                     ; C:/Users/user/Documents/GitHub/descomp/relogio/mux.vhd                        ;         ;
-; registrador.vhd                  ; yes             ; User VHDL File                     ; C:/Users/user/Documents/GitHub/descomp/relogio/registrador.vhd                ;         ;
-; ula.vhd                          ; yes             ; User VHDL File                     ; C:/Users/user/Documents/GitHub/descomp/relogio/ula.vhd                        ;         ;
-; diagrama_de_blocos_relogio.bdf   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Documents/GitHub/descomp/relogio/diagrama_de_blocos_relogio.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 3                        ;
-;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 5                        ;
-;     -- 7 input functions                    ; 0                        ;
-;     -- 6 input functions                    ; 0                        ;
-;     -- 5 input functions                    ; 5                        ;
-;     -- 4 input functions                    ; 0                        ;
-;     -- <=3 input functions                  ; 0                        ;
-;                                             ;                          ;
-; Dedicated logic registers                   ; 5                        ;
-;                                             ;                          ;
-; I/O pins                                    ; 32                       ;
-;                                             ;                          ;
-; Total DSP Blocks                            ; 0                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; mux_abs_control[3]~input ;
-; Maximum fan-out                             ; 5                        ;
-; Total fan-out                               ; 72                       ;
-; Average fan-out                             ; 0.97                     ;
-+---------------------------------------------+--------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
-+---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------+----------------------------+--------------+
-; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name                ; Library Name ;
-+---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------+----------------------------+--------------+
-; |diagrama_de_blocos_relogio     ; 5 (0)             ; 5 (0)        ; 0                 ; 0          ; 32   ; 0            ; |diagrama_de_blocos_relogio                            ; diagrama_de_blocos_relogio ; work         ;
-;    |mux_6x1:mux_das_constantes| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |diagrama_de_blocos_relogio|mux_6x1:mux_das_constantes ; mux_6x1                    ; work         ;
-;    |ula:inst|                   ; 0 (0)             ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |diagrama_de_blocos_relogio|ula:inst                   ; ula                        ; work         ;
-+---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------+----------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                            ;
-+----------------------------------------+--------------------------------------+
-; Register name                          ; Reason for Removal                   ;
-+----------------------------------------+--------------------------------------+
-; registrador:DH|q[0..4]                 ; Stuck at GND due to stuck port clear ;
-; registrador:UH|q[0..4]                 ; Stuck at GND due to stuck port clear ;
-; registrador:DM|q[0..4]                 ; Stuck at GND due to stuck port clear ;
-; registrador:UM|q[0..4]                 ; Stuck at GND due to stuck port clear ;
-; registrador:DS|q[0..4]                 ; Stuck at GND due to stuck port clear ;
-; registrador:US|q[0..4]                 ; Stuck at GND due to stuck port clear ;
-; Total Number of Removed Registers = 30 ;                                      ;
-+----------------------------------------+--------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 5     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:US ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; vector_size    ; 5     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registrador:b2v_DH ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; vector_size    ; 5     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:DS ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; vector_size    ; 5     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registrador:b2v_DM ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; vector_size    ; 5     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:UM ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; vector_size    ; 5     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registrador:b2v_DS ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; vector_size    ; 5     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:DM ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; vector_size    ; 5     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registrador:b2v_UH ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; vector_size    ; 5     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:UH ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; vector_size    ; 5     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registrador:b2v_UM ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; vector_size    ; 5     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:DH ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; vector_size    ; 5     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registrador:b2v_US ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; vector_size    ; 5     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 5                           ;
-;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
-;         0 data inputs ; 1                           ;
-;         5 data inputs ; 5                           ;
-; boundary_port         ; 32                          ;
-;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.67                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:b2v_inst"                                                                               ;
++------+--------+------------------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity         ; Details                                                                             ;
++------+--------+------------------+-------------------------------------------------------------------------------------+
+; func ; Input  ; Critical Warning ; Types are incompatible                                                              ;
+; flag ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+------------------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -348,68 +239,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sun Sep 16 12:47:39 2018
+    Info: Processing started: Sun Sep 16 23:50:10 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
-    Info (12022): Found design unit 1: mux_6x1-mux_arch File: C:/Users/user/Documents/GitHub/descomp/relogio/mux.vhd Line: 10
-    Info (12023): Found entity 1: mux_6x1 File: C:/Users/user/Documents/GitHub/descomp/relogio/mux.vhd Line: 4
+    Info (12022): Found design unit 1: mux_6x1-mux_arch File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 10
+    Info (12023): Found entity 1: mux_6x1 File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
-    Info (12022): Found design unit 1: relogio-Behavioral File: C:/Users/user/Documents/GitHub/descomp/relogio/relogio.vhd Line: 13
-    Info (12023): Found entity 1: relogio File: C:/Users/user/Documents/GitHub/descomp/relogio/relogio.vhd Line: 5
+    Info (12022): Found design unit 1: relogio-Behavioral File: C:/Users/user/Documents/GitHub/Clock_descomp/relogio.vhd Line: 13
+    Info (12023): Found entity 1: relogio File: C:/Users/user/Documents/GitHub/Clock_descomp/relogio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
-    Info (12022): Found design unit 1: registrador-reg_arch File: C:/Users/user/Documents/GitHub/descomp/relogio/registrador.vhd Line: 15
-    Info (12023): Found entity 1: registrador File: C:/Users/user/Documents/GitHub/descomp/relogio/registrador.vhd Line: 4
+    Info (12022): Found design unit 1: registrador-reg_arch File: C:/Users/user/Documents/GitHub/Clock_descomp/registrador.vhd Line: 15
+    Info (12023): Found entity 1: registrador File: C:/Users/user/Documents/GitHub/Clock_descomp/registrador.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ula-Behavioral File: C:/Users/user/Documents/GitHub/descomp/relogio/ula.vhd Line: 14
-    Info (12023): Found entity 1: ula File: C:/Users/user/Documents/GitHub/descomp/relogio/ula.vhd Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file diagrama_de_blocos_relogio.bdf
-    Info (12023): Found entity 1: diagrama_de_blocos_relogio
+    Info (12022): Found design unit 1: ula-Behavioral File: C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd Line: 14
+    Info (12023): Found entity 1: ula File: C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd Line: 5
+Warning (12125): Using design file diagrama_de_blocos_relogio.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: diagrama_de_blocos_relogio-bdf_type File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 56
+    Info (12023): Found entity 1: diagrama_de_blocos_relogio File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 25
+Warning (12300): Found the following files while searching for definition of entity "diagrama_de_blocos_relogio", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: diagrama_de_blocos_relogio.bdf
 Info (12127): Elaborating entity "diagrama_de_blocos_relogio" for the top level hierarchy
-Warning (275011): Block or symbol "registrador" of instance "DS" overlaps another block or symbol
-Warning (275011): Block or symbol "registrador" of instance "DM" overlaps another block or symbol
-Info (12128): Elaborating entity "mux_6x1" for hierarchy "mux_6x1:mux_dos_registradores"
-Warning (10492): VHDL Process Statement warning at mux.vhd(16): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/descomp/relogio/mux.vhd Line: 16
-Warning (10492): VHDL Process Statement warning at mux.vhd(18): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/descomp/relogio/mux.vhd Line: 18
-Warning (10492): VHDL Process Statement warning at mux.vhd(20): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/descomp/relogio/mux.vhd Line: 20
-Warning (10492): VHDL Process Statement warning at mux.vhd(22): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/descomp/relogio/mux.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at mux.vhd(24): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/descomp/relogio/mux.vhd Line: 24
-Warning (10492): VHDL Process Statement warning at mux.vhd(26): signal "F" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/descomp/relogio/mux.vhd Line: 26
-Info (12128): Elaborating entity "registrador" for hierarchy "registrador:US"
-Info (12128): Elaborating entity "ula" for hierarchy "ula:inst"
-Warning (12001): Port "func[0]" does not exist in entity definition of "ula".  The port's range differs between the entity definition and its actual instantiation, "ula:inst".
-Warning (12001): Port "func[1]" does not exist in entity definition of "ula".  The port's range differs between the entity definition and its actual instantiation, "ula:inst".
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out_mux_reg[4]" is stuck at GND
-    Warning (13410): Pin "out_mux_reg[3]" is stuck at GND
-    Warning (13410): Pin "out_mux_reg[2]" is stuck at GND
-    Warning (13410): Pin "out_mux_reg[1]" is stuck at GND
-    Warning (13410): Pin "out_mux_reg[0]" is stuck at GND
-    Warning (13410): Pin "reg_us[4]" is stuck at GND
-    Warning (13410): Pin "reg_us[3]" is stuck at GND
-    Warning (13410): Pin "reg_us[2]" is stuck at GND
-    Warning (13410): Pin "reg_us[1]" is stuck at GND
-    Warning (13410): Pin "reg_us[0]" is stuck at GND
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reg1_enable"
-    Warning (15610): No output dependent on input pin "ula_control[1]"
-    Warning (15610): No output dependent on input pin "ula_control[0]"
-    Warning (15610): No output dependent on input pin "mux_reg_control[3]"
-    Warning (15610): No output dependent on input pin "mux_reg_control[2]"
-    Warning (15610): No output dependent on input pin "mux_reg_control[1]"
-    Warning (15610): No output dependent on input pin "mux_reg_control[0]"
-Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 17 input pins
-    Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 5086 megabytes
-    Info: Processing ended: Sun Sep 16 12:47:56 2018
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:40
+Warning (10492): VHDL Process Statement warning at diagrama_de_blocos_relogio.vhd(202): signal "SYNTHESIZED_WIRE_14" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 202
+Warning (10620): VHDL warning at diagrama_de_blocos_relogio.vhd(202): comparison between unequal length operands always returns FALSE File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 202
+Info (12128): Elaborating entity "registrador" for hierarchy "registrador:b2v_DH" File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 109
+Info (12128): Elaborating entity "ula" for hierarchy "ula:b2v_inst" File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 139
+Info (12128): Elaborating entity "mux_6x1" for hierarchy "mux_6x1:b2v_mux_das_constantes" File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at mux.vhd(16): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at mux.vhd(18): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at mux.vhd(20): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at mux.vhd(22): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at mux.vhd(24): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at mux.vhd(26): signal "F" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 26
+Error (12005): Actual width (2) of port "func" on instance "ula:b2v_inst" is not compatible with the formal port width (1) declared by the instantiated entity File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 139
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 13 warnings
+    Error: Peak virtual memory: 5066 megabytes
+    Error: Processing ended: Sun Sep 16 23:50:28 2018
+    Error: Elapsed time: 00:00:18
+    Error: Total CPU time (on all processors): 00:00:41
 
 

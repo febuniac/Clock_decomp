@@ -4,6 +4,26 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "out_mux_reg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mux_reg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mux_reg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mux_reg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mux_reg[0]",
+					"strict" : false
+				},
+				{
 					"name" : "out_ula[4]",
 					"strict" : false
 				},
@@ -24,7 +44,115 @@
 					"strict" : false
 				},
 				{
+					"name" : "reg_us[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_us[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_us[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_us[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_us[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_reg_control[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_reg_control[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_reg_control[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_reg_control[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "reg_us_reset",
+					"strict" : false
+				},
+				{
+					"name" : "reg_us_enable",
+					"strict" : false
+				},
+				{
+					"name" : "reg_ds_reset",
+					"strict" : false
+				},
+				{
+					"name" : "reg_ds_enable",
+					"strict" : false
+				},
+				{
+					"name" : "reg_um_reset",
+					"strict" : false
+				},
+				{
+					"name" : "reg_um_enable",
+					"strict" : false
+				},
+				{
+					"name" : "reg_dm_reset",
+					"strict" : false
+				},
+				{
+					"name" : "reg_dm_enable",
+					"strict" : false
+				},
+				{
+					"name" : "reg_uh_reset",
+					"strict" : false
+				},
+				{
+					"name" : "reg_uh_enable",
+					"strict" : false
+				},
+				{
+					"name" : "reg_dh_reset",
+					"strict" : false
+				},
+				{
+					"name" : "reg_dh_enable",
+					"strict" : false
+				},
+				{
 					"name" : "v_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "v_2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "v_4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "v_6[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_abs_control[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_abs_control[1]",
 					"strict" : false
 				},
 				{
@@ -36,15 +164,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "mux_abs_control[1]",
+					"name" : "v_9[4]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_abs_control[0]",
-					"strict" : false
-				},
-				{
-					"name" : "CLK",
+					"name" : "v_0[4]",
 					"strict" : false
 				},
 				{
@@ -52,7 +176,47 @@
 					"strict" : false
 				},
 				{
+					"name" : "v_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "v_4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "v_6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "v_9[3]",
+					"strict" : false
+				},
+				{
+					"name" : "v_0[3]",
+					"strict" : false
+				},
+				{
 					"name" : "v_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "v_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "v_4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "v_6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "v_9[2]",
+					"strict" : false
+				},
+				{
+					"name" : "v_0[2]",
 					"strict" : false
 				},
 				{
@@ -60,7 +224,47 @@
 					"strict" : false
 				},
 				{
+					"name" : "v_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "v_4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "v_6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "v_9[1]",
+					"strict" : false
+				},
+				{
+					"name" : "v_0[1]",
+					"strict" : false
+				},
+				{
 					"name" : "v_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "v_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "v_4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "v_6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "v_9[0]",
+					"strict" : false
+				},
+				{
+					"name" : "v_0[0]",
 					"strict" : false
 				}
 			]
