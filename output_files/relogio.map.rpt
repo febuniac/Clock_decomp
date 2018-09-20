@@ -1,5 +1,5 @@
 Analysis & Synthesis report for relogio
-Sun Sep 16 23:50:28 2018
+Thu Sep 20 11:57:51 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Parameter Settings for User Entity Instance: registrador:b2v_DH
-  6. Parameter Settings for User Entity Instance: registrador:b2v_DM
-  7. Parameter Settings for User Entity Instance: registrador:b2v_DS
-  8. Parameter Settings for User Entity Instance: registrador:b2v_UH
-  9. Parameter Settings for User Entity Instance: registrador:b2v_UM
- 10. Parameter Settings for User Entity Instance: registrador:b2v_US
- 11. Port Connectivity Checks: "ula:b2v_inst"
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +37,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Sep 16 23:50:28 2018           ;
+; Analysis & Synthesis Status ; Failed - Thu Sep 20 11:57:51 2018           ;
 ; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name               ; relogio                                     ;
 ; Top-level Entity Name       ; diagrama_de_blocos_relogio                  ;
@@ -163,83 +156,13 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:b2v_DH ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; vector_size    ; 5     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:b2v_DM ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; vector_size    ; 5     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:b2v_DS ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; vector_size    ; 5     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:b2v_UH ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; vector_size    ; 5     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:b2v_UM ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; vector_size    ; 5     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registrador:b2v_US ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; vector_size    ; 5     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ula:b2v_inst"                                                                               ;
-+------+--------+------------------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity         ; Details                                                                             ;
-+------+--------+------------------+-------------------------------------------------------------------------------------+
-; func ; Input  ; Critical Warning ; Types are incompatible                                                              ;
-; flag ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+------------------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sun Sep 16 23:50:10 2018
+    Info: Processing started: Thu Sep 20 11:57:34 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -255,29 +178,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file registr
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
     Info (12022): Found design unit 1: ula-Behavioral File: C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd Line: 14
     Info (12023): Found entity 1: ula File: C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd Line: 5
-Warning (12125): Using design file diagrama_de_blocos_relogio.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: diagrama_de_blocos_relogio-bdf_type File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 56
-    Info (12023): Found entity 1: diagrama_de_blocos_relogio File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 25
-Warning (12300): Found the following files while searching for definition of entity "diagrama_de_blocos_relogio", but did not use these files because already using a different file containing the entity definition
-    Warning (12126): File: diagrama_de_blocos_relogio.bdf
-Info (12127): Elaborating entity "diagrama_de_blocos_relogio" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at diagrama_de_blocos_relogio.vhd(202): signal "SYNTHESIZED_WIRE_14" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 202
-Warning (10620): VHDL warning at diagrama_de_blocos_relogio.vhd(202): comparison between unequal length operands always returns FALSE File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 202
-Info (12128): Elaborating entity "registrador" for hierarchy "registrador:b2v_DH" File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 109
-Info (12128): Elaborating entity "ula" for hierarchy "ula:b2v_inst" File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 139
-Info (12128): Elaborating entity "mux_6x1" for hierarchy "mux_6x1:b2v_mux_das_constantes" File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at mux.vhd(16): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 16
-Warning (10492): VHDL Process Statement warning at mux.vhd(18): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 18
-Warning (10492): VHDL Process Statement warning at mux.vhd(20): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 20
-Warning (10492): VHDL Process Statement warning at mux.vhd(22): signal "D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at mux.vhd(24): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 24
-Warning (10492): VHDL Process Statement warning at mux.vhd(26): signal "F" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/user/Documents/GitHub/Clock_descomp/mux.vhd Line: 26
-Error (12005): Actual width (2) of port "func" on instance "ula:b2v_inst" is not compatible with the formal port width (1) declared by the instantiated entity File: C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.vhd Line: 139
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 13 warnings
-    Error: Peak virtual memory: 5066 megabytes
-    Error: Processing ended: Sun Sep 16 23:50:28 2018
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:41
+Info (12021): Found 1 design units, including 1 entities, in source file diagrama_de_blocos_relogio.bdf
+    Info (12023): Found entity 1: diagrama_de_blocos_relogio
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: single_port_rom-rtl File: C:/Users/user/Documents/GitHub/Clock_descomp/ROM.vhd Line: 25
+    Info (12023): Found entity 1: single_port_rom File: C:/Users/user/Documents/GitHub/Clock_descomp/ROM.vhd Line: 8
+Error (10316): VHDL error at ula.vhd(29): character ''0'' used but not declared for type "std_logic_vector" File: C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd Line: 29
+Error (10316): VHDL error at ula.vhd(31): character ''1'' used but not declared for type "std_logic_vector" File: C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd Line: 31
+Error (10316): VHDL error at ula.vhd(33): character ''2'' used but not declared for type "std_logic_vector" File: C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd Line: 33
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+    Error: Peak virtual memory: 5063 megabytes
+    Error: Processing ended: Thu Sep 20 11:57:51 2018
+    Error: Elapsed time: 00:00:17
+    Error: Total CPU time (on all processors): 00:00:42
 
 

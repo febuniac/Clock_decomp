@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity ula is
 port(   clk : in std_logic; 
         A,B : in signed(4 downto 0); 
-        func : in std_logic; 
+        func : in std_logic_vector(2 downto 0); 
 		  flag : out boolean;
         Q : out signed(4 downto 0) 
         );
@@ -30,6 +30,8 @@ begin
                 R3 <= R1 + R2;
             when '1' => 
                 R3 <= R1 - R2;
+				when '10' =>
+					R3 <= R1 xnor R2;
 				if R3 = 0 then
 					flag <= true;
 				else 

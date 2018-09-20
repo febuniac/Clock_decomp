@@ -80,6 +80,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "v_10[4]",
+					"strict" : false
+				},
+				{
 					"name" : "CLK",
 					"strict" : false
 				},
@@ -132,7 +136,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_1[4]",
+					"name" : "v_10[3]",
+					"strict" : false
+				},
+				{
+					"name" : "v_10[2]",
+					"strict" : false
+				},
+				{
+					"name" : "v_10[1]",
+					"strict" : false
+				},
+				{
+					"name" : "v_10[0]",
+					"strict" : false
+				},
+				{
+					"name" : "v_um[4]",
 					"strict" : false
 				},
 				{
@@ -172,7 +192,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_1[3]",
+					"name" : "v_um[3]",
 					"strict" : false
 				},
 				{
@@ -196,7 +216,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_1[2]",
+					"name" : "v_um[2]",
 					"strict" : false
 				},
 				{
@@ -220,7 +240,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_1[1]",
+					"name" : "v_um[1]",
 					"strict" : false
 				},
 				{
@@ -244,7 +264,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_1[0]",
+					"name" : "v_um[0]",
 					"strict" : false
 				},
 				{

@@ -1,5 +1,5 @@
 Flow report for relogio
-Sun Sep 16 23:50:28 2018
+Thu Sep 20 11:57:51 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Sun Sep 16 23:50:28 2018      ;
+; Flow Status                 ; Flow Failed - Thu Sep 20 11:57:51 2018      ;
 ; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name               ; relogio                                     ;
 ; Top-level Entity Name       ; diagrama_de_blocos_relogio                  ;
@@ -63,7 +63,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/16/2018 23:50:11 ;
+; Start date & time ; 09/20/2018 11:57:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; relogio             ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+----------------------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name                ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+----------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 268891677483430.153715261011096       ; --            ; --                         ; --         ;
+; COMPILER_SIGNATURE_ID               ; 268891677483430.153745545512972       ; --            ; --                         ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --                         ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --                         ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; diagrama_de_blocos_relogio ; Top        ;
@@ -92,8 +92,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 5066 MB             ; 00:00:41                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:41                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 5063 MB             ; 00:00:42                           ;
+; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
