@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity ula is
 port(   clk : in std_logic; 
         A,B : in signed(4 downto 0); 
-        func : in std_logic_vector(2 downto 0); 
+        func : in std_logic_vector(1 downto 0); 
 		  flag : out boolean;
         Q : out signed(4 downto 0) 
         );
@@ -26,11 +26,13 @@ begin
 
     if(rising_edge(clk)) then 
         case func is
-            when '0' => 
+            when "00" => 
                 R3 <= R1 + R2;
-            when '1' => 
+            when "01" => 
                 R3 <= R1 - R2;
-				when '10' =>
+				when "10" =>
+					R3 <= R1 xnor R2;
+				when "11" =>
 					R3 <= R1 xnor R2;
 				if R3 = 0 then
 					flag <= true;

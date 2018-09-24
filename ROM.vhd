@@ -32,11 +32,11 @@ architecture rtl of single_port_rom is
 		return memory_t is 
 		variable tmp : memory_t := (others => (others => '0'));
 	begin 
-			tmp(0) := std_logic_vector(to_unsigned("0", DATA_WIDTH));
-			tmp(1) := std_logic_vector(to_unsigned("‭2088‬", DATA_WIDTH));
-			tmp(2) := std_logic_vector(to_unsigned("0", DATA_WIDTH));
-			tmp(3) := std_logic_vector(to_unsigned("‭2088‬", DATA_WIDTH));
-			tmp(4) := std_logic_vector(to_unsigned("0", DATA_WIDTH));
+			tmp(0) := std_logic_vector(to_unsigned(0, DATA_WIDTH));
+			tmp(1) := std_logic_vector(to_unsigned(2088, DATA_WIDTH));
+			tmp(2) := std_logic_vector(to_unsigned(0, DATA_WIDTH));
+			tmp(3) := std_logic_vector(to_unsigned(2088, DATA_WIDTH));
+			tmp(4) := std_logic_vector(to_unsigned(0, DATA_WIDTH));
 		return tmp;
 	end init_rom;	 
 

@@ -1,7 +1,7 @@
 ___REGREGREG
 ___ALUCTEENB
 ALUMUXMUXMUX
-000000000000_incrementa_1_no_registrador_us=1
+000000000000  -- _incrementa_1_no_registrador_us=1
 100000101000_compara_o_registrador_us_com_10=F
 000000000000_incrementa_1_no_registrador_us=2
 100000101000_compara_o_registrador_us_com_10=F

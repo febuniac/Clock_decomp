@@ -4,26 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "out_mux_reg[4]",
-					"strict" : false
-				},
-				{
-					"name" : "out_mux_reg[3]",
-					"strict" : false
-				},
-				{
-					"name" : "out_mux_reg[2]",
-					"strict" : false
-				},
-				{
-					"name" : "out_mux_reg[1]",
-					"strict" : false
-				},
-				{
-					"name" : "out_mux_reg[0]",
-					"strict" : false
-				},
-				{
 					"name" : "out_ula[4]",
 					"strict" : false
 				},
@@ -44,115 +24,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "reg_us[4]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us[2]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us[1]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us[0]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_reg_control[3]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_reg_control[2]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_reg_control[0]",
-					"strict" : false
-				},
-				{
-					"name" : "mux_reg_control[1]",
-					"strict" : false
-				},
-				{
-					"name" : "v_10[4]",
-					"strict" : false
-				},
-				{
-					"name" : "CLK",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us_reset",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us_enable",
-					"strict" : false
-				},
-				{
-					"name" : "reg_ds_reset",
-					"strict" : false
-				},
-				{
-					"name" : "reg_ds_enable",
-					"strict" : false
-				},
-				{
-					"name" : "reg_um_reset",
-					"strict" : false
-				},
-				{
-					"name" : "reg_um_enable",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dm_reset",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dm_enable",
-					"strict" : false
-				},
-				{
-					"name" : "reg_uh_reset",
-					"strict" : false
-				},
-				{
-					"name" : "reg_uh_enable",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dh_reset",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dh_enable",
-					"strict" : false
-				},
-				{
-					"name" : "v_10[3]",
-					"strict" : false
-				},
-				{
-					"name" : "v_10[2]",
-					"strict" : false
-				},
-				{
-					"name" : "v_10[1]",
-					"strict" : false
-				},
-				{
-					"name" : "v_10[0]",
-					"strict" : false
-				},
-				{
-					"name" : "v_um[4]",
+					"name" : "v_14",
 					"strict" : false
 				},
 				{
@@ -176,6 +48,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "v_9[4]",
+					"strict" : false
+				},
+				{
+					"name" : "v_104",
+					"strict" : false
+				},
+				{
+					"name" : "ula_control[1]",
+					"strict" : false
+				},
+				{
 					"name" : "mux_abs_control[3]",
 					"strict" : false
 				},
@@ -184,15 +68,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_9[4]",
+					"name" : "CLK",
 					"strict" : false
 				},
 				{
-					"name" : "v_0[4]",
-					"strict" : false
-				},
-				{
-					"name" : "v_um[3]",
+					"name" : "v_13",
 					"strict" : false
 				},
 				{
@@ -212,11 +92,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_0[3]",
+					"name" : "v_103",
 					"strict" : false
 				},
 				{
-					"name" : "v_um[2]",
+					"name" : "v_12",
 					"strict" : false
 				},
 				{
@@ -236,11 +116,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_0[2]",
+					"name" : "v_102",
 					"strict" : false
 				},
 				{
-					"name" : "v_um[1]",
+					"name" : "v_11",
 					"strict" : false
 				},
 				{
@@ -260,11 +140,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_0[1]",
+					"name" : "v_101",
 					"strict" : false
 				},
 				{
-					"name" : "v_um[0]",
+					"name" : "v_10",
 					"strict" : false
 				},
 				{
@@ -284,7 +164,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_0[0]",
+					"name" : "v_100",
 					"strict" : false
 				}
 			]
