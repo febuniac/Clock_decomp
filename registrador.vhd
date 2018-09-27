@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity registrador is
-	Generic (Vector_Size: natural:=5);
+	Generic (Vector_Size: natural:=4);
 	port ( 
 			d:   in  STD_LOGIC_VECTOR((Vector_Size - 1) downto 0);
 			clk: in  STD_LOGIC;
