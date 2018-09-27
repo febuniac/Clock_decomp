@@ -9,7 +9,7 @@ end mux_6x1;
 
 architecture mux_arch of mux_6x1 is
 begin
-process(SEL)
+process(All)
 begin
 	case SEL is
 		when "000" => 
@@ -22,10 +22,10 @@ begin
 			y <= D;
 		when "100" => 
 			y <= E;
-		when "0101" => 
+		when "101" => 
 			y <= F;
 		when others => 
-			y <= "000";
+			y <= "0000";
 	end case;
 end process;
 end mux_arch;

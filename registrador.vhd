@@ -2,13 +2,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity registrador is
-	Generic (Vector_Size: natural:=4);
 	port ( 
-			d:   in  STD_LOGIC_VECTOR((Vector_Size - 1) downto 0);
+			d:   in  STD_LOGIC_VECTOR(3 downto 0);
 			clk: in  STD_LOGIC;
 			enable: in STD_LOGIC;
 			reset: in STD_LOGIC;
-			q:   out STD_LOGIC_VECTOR((Vector_Size - 1) downto 0)
+			q:   out STD_LOGIC_VECTOR(3 downto 0)
 	);
 end entity;
 

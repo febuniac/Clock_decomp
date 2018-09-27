@@ -1,13 +1,13 @@
-Fitter Status : Successful - Thu Sep 27 16:54:49 2018
+Fitter Status : Successful - Thu Sep 27 18:31:50 2018
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : relogio
 Top-level Entity Name : diagrama_de_blocos_relogio
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 31 / 56,480 ( < 1 % )
-Total registers : 22
-Total pins : 47 / 268 ( 18 % )
+Logic utilization (in ALMs) : 30 / 56,480 ( < 1 % )
+Total registers : 23
+Total pins : 58 / 268 ( 22 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )
