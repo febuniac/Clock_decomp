@@ -9,42 +9,42 @@ z2
 cModel Technology
 Z0 dC:/Users/user/Documents/GitHub/Clock_descomp/simulation/qsim
 vdiagrama_de_blocos_relogio
-Z1 !s110 1538090021
+!s110 1538489258
 !i10b 1
-!s100 1[F]BT8D@c^6HQlVXbY^N1
-I=WdRBe4=LmBTQi2;z9P;b3
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 0n=ki2Se>Vb:Qg4NfQ@Le0
+IV]O`b?0zWo;TA1;JPF7?10
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1538090019
+w1538489256
 8relogio.vo
 Frelogio.vo
 L0 32
-Z3 OV;L;10.4d;61
+Z2 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z4 !s108 1538090021.000000
+Z3 !s108 1538489258.000000
 !s107 relogio.vo|
 !s90 -work|work|relogio.vo|
 !i113 1
-Z5 o-work work
+Z4 o-work work
 vdiagrama_de_blocos_relogio_vlg_vec_tst
-R1
+!s110 1538489259
 !i10b 1
-!s100 RBRfXhz09S;Dg[fE4W:@N1
-IofG4>85OoAWU`U_O9WWY=3
-R2
+!s100 kSS`;]5jR`?2PLiPnGN_J3
+IDK5kH2FAegT7=bThXWUYi2
+R1
 R0
-w1538090017
-8Waveform12.vwf.vt
-FWaveform12.vwf.vt
+w1538489254
+8Waveform18.vwf.vt
+FWaveform18.vwf.vt
 L0 30
-R3
+R2
 r1
 !s85 0
 31
-R4
-!s107 Waveform12.vwf.vt|
-!s90 -work|work|Waveform12.vwf.vt|
+R3
+!s107 Waveform18.vwf.vt|
+!s90 -work|work|Waveform18.vwf.vt|
 !i113 1
-R5
+R4

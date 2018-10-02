@@ -1,5 +1,5 @@
 Assembler report for relogio
-Thu Sep 27 20:11:20 2018
+Tue Oct 02 10:48:59 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -38,11 +38,11 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Sep 27 20:11:20 2018 ;
+; Assembler Status      ; Successful - Tue Oct 02 10:48:59 2018 ;
 ; Revision Name         ; relogio                               ;
 ; Top-level Entity Name ; diagrama_de_blocos_relogio            ;
-; Family                ; Cyclone V                             ;
-; Device                ; 5CGXFC7C7F23C8                        ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE6F17C6                           ;
 +-----------------------+---------------------------------------+
 
 
@@ -67,9 +67,9 @@ agreement for further details.
 +----------------+--------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                        ;
 +----------------+--------------------------------------------------------------------------------+
-; Device         ; 5CGXFC7C7F23C8                                                                 ;
-; JTAG usercode  ; 0x00EDD083                                                                     ;
-; Checksum       ; 0x00EDD083                                                                     ;
+; Device         ; EP4CE6F17C6                                                                    ;
+; JTAG usercode  ; 0x0009E6C1                                                                     ;
+; Checksum       ; 0x0009E6C1                                                                     ;
 +----------------+--------------------------------------------------------------------------------+
 
 
@@ -79,14 +79,15 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Thu Sep 27 20:11:07 2018
+    Info: Processing started: Tue Oct 02 10:48:58 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off relogio -c relogio
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 5058 megabytes
-    Info: Processing ended: Thu Sep 27 20:11:20 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 4903 megabytes
+    Info: Processing ended: Tue Oct 02 10:48:59 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

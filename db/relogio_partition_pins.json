@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "reg_US_enable",
+					"strict" : false
+				},
+				{
 					"name" : "comp_out_DH",
 					"strict" : false
 				},
@@ -25,6 +29,26 @@
 				},
 				{
 					"name" : "comp_out_US",
+					"strict" : false
+				},
+				{
+					"name" : "reg_UH_enable",
+					"strict" : false
+				},
+				{
+					"name" : "reg_DH_enable",
+					"strict" : false
+				},
+				{
+					"name" : "reg_UM_enable",
+					"strict" : false
+				},
+				{
+					"name" : "reg_DS_enable",
+					"strict" : false
+				},
+				{
+					"name" : "reg_DM_enable",
 					"strict" : false
 				},
 				{
@@ -196,10 +220,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_2[3]",
-					"strict" : false
-				},
-				{
 					"name" : "v_2[1]",
 					"strict" : false
 				},
@@ -212,11 +232,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_4[2]",
+					"name" : "v_2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "v_4[3]",
+					"name" : "v_4[2]",
 					"strict" : false
 				},
 				{
@@ -224,19 +244,11 @@
 					"strict" : false
 				},
 				{
+					"name" : "v_4[3]",
+					"strict" : false
+				},
+				{
 					"name" : "v_4[0]",
-					"strict" : false
-				},
-				{
-					"name" : "v_6[3]",
-					"strict" : false
-				},
-				{
-					"name" : "v_6[1]",
-					"strict" : false
-				},
-				{
-					"name" : "v_6[0]",
 					"strict" : false
 				},
 				{
@@ -244,19 +256,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_dez[2]",
+					"name" : "v_6[1]",
 					"strict" : false
 				},
 				{
-					"name" : "v_dez[3]",
+					"name" : "v_6[3]",
 					"strict" : false
 				},
 				{
-					"name" : "v_dez[1]",
+					"name" : "v_6[0]",
 					"strict" : false
 				},
 				{
-					"name" : "v_dez[0]",
+					"name" : "v_8[2]",
+					"strict" : false
+				},
+				{
+					"name" : "v_8[1]",
+					"strict" : false
+				},
+				{
+					"name" : "v_8[3]",
+					"strict" : false
+				},
+				{
+					"name" : "v_8[0]",
 					"strict" : false
 				},
 				{
