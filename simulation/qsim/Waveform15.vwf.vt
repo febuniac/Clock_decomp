@@ -1,0 +1,228 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/02/2018 09:40:24"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          diagrama_de_blocos_relogio
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module diagrama_de_blocos_relogio_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg [3:0] v_1;
+reg [3:0] v_2;
+reg [3:0] v_4;
+reg [3:0] v_6;
+reg [3:0] v_9;
+reg [3:0] v_dez;
+// wires                                               
+wire comp_out_DH;
+wire comp_out_DM;
+wire comp_out_DS;
+wire comp_out_UH;
+wire comp_out_UM;
+wire comp_out_US;
+wire [3:0] out_mux_reg;
+wire [3:0] out_ula;
+wire [12:0] palavra_out;
+wire [3:0] reg_dh;
+wire reg_DH_enable;
+wire [3:0] reg_dm;
+wire reg_DM_enable;
+wire [3:0] reg_ds;
+wire reg_DS_enable;
+wire [3:0] reg_uh;
+wire reg_UH_enable;
+wire [3:0] reg_um;
+wire reg_UM_enable;
+wire [3:0] reg_us;
+wire reg_US_enable;
+
+// assign statements (if any)                          
+diagrama_de_blocos_relogio i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.comp_out_DH(comp_out_DH),
+	.comp_out_DM(comp_out_DM),
+	.comp_out_DS(comp_out_DS),
+	.comp_out_UH(comp_out_UH),
+	.comp_out_UM(comp_out_UM),
+	.comp_out_US(comp_out_US),
+	.out_mux_reg(out_mux_reg),
+	.out_ula(out_ula),
+	.palavra_out(palavra_out),
+	.reg_dh(reg_dh),
+	.reg_DH_enable(reg_DH_enable),
+	.reg_dm(reg_dm),
+	.reg_DM_enable(reg_DM_enable),
+	.reg_ds(reg_ds),
+	.reg_DS_enable(reg_DS_enable),
+	.reg_uh(reg_uh),
+	.reg_UH_enable(reg_UH_enable),
+	.reg_um(reg_um),
+	.reg_UM_enable(reg_UM_enable),
+	.reg_us(reg_us),
+	.reg_US_enable(reg_US_enable),
+	.v_1(v_1),
+	.v_2(v_2),
+	.v_4(v_4),
+	.v_6(v_6),
+	.v_9(v_9),
+	.v_dez(v_dez)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #10000 1'b1;
+	#10000;
+end 
+// v_1[ 3 ]
+initial
+begin
+	v_1[3] = 1'b0;
+end 
+// v_1[ 2 ]
+initial
+begin
+	v_1[2] = 1'b0;
+end 
+// v_1[ 1 ]
+initial
+begin
+	v_1[1] = 1'b0;
+end 
+// v_1[ 0 ]
+initial
+begin
+	v_1[0] = 1'b1;
+end 
+// v_2[ 3 ]
+initial
+begin
+	v_2[3] = 1'b0;
+end 
+// v_2[ 2 ]
+initial
+begin
+	v_2[2] = 1'b0;
+end 
+// v_2[ 1 ]
+initial
+begin
+	v_2[1] = 1'b1;
+end 
+// v_2[ 0 ]
+initial
+begin
+	v_2[0] = 1'b0;
+end 
+// v_4[ 3 ]
+initial
+begin
+	v_4[3] = 1'b0;
+end 
+// v_4[ 2 ]
+initial
+begin
+	v_4[2] = 1'b1;
+end 
+// v_4[ 1 ]
+initial
+begin
+	v_4[1] = 1'b0;
+end 
+// v_4[ 0 ]
+initial
+begin
+	v_4[0] = 1'b0;
+end 
+// v_6[ 3 ]
+initial
+begin
+	v_6[3] = 1'b0;
+end 
+// v_6[ 2 ]
+initial
+begin
+	v_6[2] = 1'b1;
+end 
+// v_6[ 1 ]
+initial
+begin
+	v_6[1] = 1'b1;
+end 
+// v_6[ 0 ]
+initial
+begin
+	v_6[0] = 1'b0;
+end 
+// v_9[ 3 ]
+initial
+begin
+	v_9[3] = 1'b1;
+end 
+// v_9[ 2 ]
+initial
+begin
+	v_9[2] = 1'b0;
+end 
+// v_9[ 1 ]
+initial
+begin
+	v_9[1] = 1'b0;
+end 
+// v_9[ 0 ]
+initial
+begin
+	v_9[0] = 1'b0;
+end 
+// v_dez[ 3 ]
+initial
+begin
+	v_dez[3] = 1'b1;
+end 
+// v_dez[ 2 ]
+initial
+begin
+	v_dez[2] = 1'b0;
+end 
+// v_dez[ 1 ]
+initial
+begin
+	v_dez[1] = 1'b0;
+end 
+// v_dez[ 0 ]
+initial
+begin
+	v_dez[0] = 1'b1;
+end 
+endmodule
+

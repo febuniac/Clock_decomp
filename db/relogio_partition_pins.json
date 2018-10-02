@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "reg_US_enable",
-					"strict" : false
-				},
-				{
 					"name" : "comp_out_DH",
 					"strict" : false
 				},
@@ -32,42 +28,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "reg_UH_enable",
-					"strict" : false
-				},
-				{
-					"name" : "reg_DH_enable",
-					"strict" : false
-				},
-				{
-					"name" : "reg_UM_enable",
-					"strict" : false
-				},
-				{
-					"name" : "reg_DS_enable",
-					"strict" : false
-				},
-				{
-					"name" : "reg_DM_enable",
-					"strict" : false
-				},
-				{
-					"name" : "out_mux_reg[3]",
-					"strict" : false
-				},
-				{
-					"name" : "out_mux_reg[2]",
-					"strict" : false
-				},
-				{
-					"name" : "out_mux_reg[1]",
-					"strict" : false
-				},
-				{
-					"name" : "out_mux_reg[0]",
-					"strict" : false
-				},
-				{
 					"name" : "out_ula[3]",
 					"strict" : false
 				},
@@ -84,139 +44,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "palavra_out[10]",
+					"name" : "v_2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "palavra_out[8]",
-					"strict" : false
-				},
-				{
-					"name" : "palavra_out[7]",
-					"strict" : false
-				},
-				{
-					"name" : "palavra_out[6]",
-					"strict" : false
-				},
-				{
-					"name" : "palavra_out[5]",
-					"strict" : false
-				},
-				{
-					"name" : "palavra_out[4]",
-					"strict" : false
-				},
-				{
-					"name" : "palavra_out[3]",
-					"strict" : false
-				},
-				{
-					"name" : "palavra_out[2]",
-					"strict" : false
-				},
-				{
-					"name" : "palavra_out[1]",
-					"strict" : false
-				},
-				{
-					"name" : "palavra_out[0]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dh[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dh[2]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dh[1]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dh[0]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dm[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dm[2]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dm[1]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_dm[0]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_ds[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_ds[2]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_ds[1]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_ds[0]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_uh[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_uh[2]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_uh[1]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_uh[0]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_um[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_um[2]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_um[1]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_um[0]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us[2]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us[1]",
-					"strict" : false
-				},
-				{
-					"name" : "reg_us[0]",
+					"name" : "v_2[2]",
 					"strict" : false
 				},
 				{
@@ -228,11 +60,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "v_2[3]",
+					"name" : "v_4[3]",
 					"strict" : false
 				},
 				{
@@ -244,11 +72,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_4[3]",
+					"name" : "v_4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "v_4[0]",
+					"name" : "v_6[3]",
 					"strict" : false
 				},
 				{
@@ -260,11 +88,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_6[3]",
+					"name" : "v_6[0]",
 					"strict" : false
 				},
 				{
-					"name" : "v_6[0]",
+					"name" : "v_8[3]",
 					"strict" : false
 				},
 				{
@@ -276,10 +104,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_8[3]",
-					"strict" : false
-				},
-				{
 					"name" : "v_8[0]",
 					"strict" : false
 				},
@@ -288,15 +112,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_9[3]",
-					"strict" : false
-				},
-				{
 					"name" : "v_1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "v_9[2]",
 					"strict" : false
 				},
 				{
@@ -304,19 +120,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_9[1]",
-					"strict" : false
-				},
-				{
 					"name" : "v_1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "v_9[0]",
-					"strict" : false
-				},
-				{
-					"name" : "CLK",
 					"strict" : false
 				}
 			]

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for relogio
-Tue Oct 02 10:48:44 2018
+Tue Oct 02 15:23:18 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -14,11 +14,14 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |diagrama_de_blocos_relogio|fsm_relogio:ROM|fstate
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: divisorGenerico:divisorGenerico
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +48,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 02 10:48:44 2018       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 02 15:23:18 2018       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; relogio                                     ;
 ; Top-level Entity Name              ; diagrama_de_blocos_relogio                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 119                                         ;
-;     Total combinational functions  ; 96                                          ;
-;     Dedicated logic registers      ; 36                                          ;
-; Total registers                    ; 36                                          ;
-; Total pins                         ; 82                                          ;
+; Total logic elements               ; 4                                           ;
+;     Total combinational functions  ; 4                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 124                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -158,11 +161,10 @@ agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -178,65 +180,55 @@ agreement for further details.
 ; registrador.vhd                        ; yes             ; User VHDL File                     ; C:/Users/user/Documents/GitHub/Clock_descomp/registrador.vhd                ;         ;
 ; ula.vhd                                ; yes             ; User VHDL File                     ; C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd                        ;         ;
 ; diagrama_de_blocos_relogio.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/user/Documents/GitHub/Clock_descomp/diagrama_de_blocos_relogio.bdf ;         ;
+; conversorHex7Seg.vhd                   ; yes             ; User VHDL File                     ; C:/Users/user/Documents/GitHub/Clock_descomp/conversorHex7Seg.vhd           ;         ;
+; divisorGenerico.vhd                    ; yes             ; User VHDL File                     ; C:/Users/user/Documents/GitHub/Clock_descomp/divisorGenerico.vhd            ;         ;
+; edgeDetector.vhd                       ; yes             ; User VHDL File                     ; C:/Users/user/Documents/GitHub/Clock_descomp/edgeDetector.vhd               ;         ;
 +----------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 119       ;
-;                                             ;           ;
-; Total combinational functions               ; 96        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 65        ;
-;     -- 3 input functions                    ; 21        ;
-;     -- <=2 input functions                  ; 10        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 92        ;
-;     -- arithmetic mode                      ; 4         ;
-;                                             ;           ;
-; Total registers                             ; 36        ;
-;     -- Dedicated logic registers            ; 36        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 82        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 36        ;
-; Total fan-out                               ; 575       ;
-; Average fan-out                             ; 1.94      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 4                 ;
+;                                             ;                   ;
+; Total combinational functions               ; 4                 ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 4                 ;
+;     -- 3 input functions                    ; 0                 ;
+;     -- <=2 input functions                  ; 0                 ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 4                 ;
+;     -- arithmetic mode                      ; 0                 ;
+;                                             ;                   ;
+; Total registers                             ; 0                 ;
+;     -- Dedicated logic registers            ; 0                 ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 124               ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; comp:comp_DM|eq~0 ;
+; Maximum fan-out                             ; 2                 ;
+; Total fan-out                               ; 150               ;
+; Average fan-out                             ; 0.60              ;
++---------------------------------------------+-------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+----------------------------+--------------+
-; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name                ; Library Name ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+----------------------------+--------------+
-; |diagrama_de_blocos_relogio        ; 96 (0)            ; 36 (0)       ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |diagrama_de_blocos_relogio                               ; diagrama_de_blocos_relogio ; work         ;
-;    |comp:comp_DH|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_DH                  ; comp                       ; work         ;
-;    |comp:comp_DM|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_DM                  ; comp                       ; work         ;
-;    |comp:comp_DS|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_DS                  ; comp                       ; work         ;
-;    |comp:comp_UH|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_UH                  ; comp                       ; work         ;
-;    |comp:comp_UM|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_UM                  ; comp                       ; work         ;
-;    |comp:comp_US|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_US                  ; comp                       ; work         ;
-;    |demux:demux_reg_enable|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|demux:demux_reg_enable        ; demux                      ; work         ;
-;    |fsm_relogio:ROM|               ; 19 (19)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|fsm_relogio:ROM               ; fsm_relogio                ; work         ;
-;    |mux_6x1:mux_das_constantes|    ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|mux_6x1:mux_das_constantes    ; mux_6x1                    ; work         ;
-;    |mux_6x1:mux_dos_registradores| ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|mux_6x1:mux_dos_registradores ; mux_6x1                    ; work         ;
-;    |registrador:DH|                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|registrador:DH                ; registrador                ; work         ;
-;    |registrador:DM|                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|registrador:DM                ; registrador                ; work         ;
-;    |registrador:DS|                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|registrador:DS                ; registrador                ; work         ;
-;    |registrador:UH|                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|registrador:UH                ; registrador                ; work         ;
-;    |registrador:UM|                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|registrador:UM                ; registrador                ; work         ;
-;    |registrador:US|                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|registrador:US                ; registrador                ; work         ;
-;    |ula:inst|                      ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|ula:inst                      ; ula                        ; work         ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+----------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+----------------------------+--------------+
+; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name                ; Library Name ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+----------------------------+--------------+
+; |diagrama_de_blocos_relogio ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 124  ; 0            ; |diagrama_de_blocos_relogio              ; diagrama_de_blocos_relogio ; work         ;
+;    |comp:comp_DH|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_DH ; comp                       ; work         ;
+;    |comp:comp_DM|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_DM ; comp                       ; work         ;
+;    |comp:comp_UH|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_UH ; comp                       ; work         ;
+;    |comp:comp_UM|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diagrama_de_blocos_relogio|comp:comp_UM ; comp                       ; work         ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -261,29 +253,88 @@ Encoding Type:  One-Hot
 +-------------------------------+----------------+-------------------------------+------------------------------+-------------------+----------------+-------------------------------+------------------------------+---------------------+----------------+------------------------------+------------------------------+----------------------+
 
 
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++------------------------------------------------+----------------------------------------+
+; Register name                                  ; Reason for Removal                     ;
++------------------------------------------------+----------------------------------------+
+; edgeDetector:edgeDetector|saidaQ               ; Stuck at VCC due to stuck port data_in ;
+; registrador:DH|q[0..3]                         ; Stuck at GND due to stuck port clock   ;
+; registrador:UH|q[0..3]                         ; Stuck at GND due to stuck port clock   ;
+; registrador:DM|q[0..3]                         ; Stuck at GND due to stuck port clock   ;
+; registrador:UM|q[0..3]                         ; Stuck at GND due to stuck port clock   ;
+; registrador:DS|q[0..3]                         ; Stuck at GND due to stuck port clock   ;
+; registrador:US|q[0..3]                         ; Stuck at GND due to stuck port clock   ;
+; divisorGenerico:divisorGenerico|tick           ; Lost fanout                            ;
+; divisorGenerico:divisorGenerico|contador[0..3] ; Lost fanout                            ;
+; fsm_relogio:ROM|fstate.conta_segundo           ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.Incrementa_DS_parte_I   ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.incrementa_DS_parteII   ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.zera_DS                 ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.conta_minuto            ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.incrementa_DM_parte_I   ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.incrementa_DM_parte_II  ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.zera_DM                 ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.conta_hora              ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.incrementa_DH_parte_I   ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.incrementa_DH_parte_II  ; Stuck at GND due to stuck port clock   ;
+; fsm_relogio:ROM|fstate.zera_DH                 ; Stuck at GND due to stuck port clock   ;
+; Total Number of Removed Registers = 42         ;                                        ;
++------------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                    ;
++----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                                ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; edgeDetector:edgeDetector|saidaQ             ; Stuck at VCC              ; registrador:DH|q[3], registrador:DH|q[2], registrador:DH|q[1], registrador:DH|q[0], ;
+;                                              ; due to stuck port data_in ; registrador:UH|q[3], registrador:UH|q[2], registrador:UH|q[1], registrador:UH|q[0], ;
+;                                              ;                           ; registrador:DM|q[3], registrador:DM|q[2], registrador:DM|q[1], registrador:DM|q[0], ;
+;                                              ;                           ; registrador:UM|q[3], registrador:UM|q[2], registrador:UM|q[1], registrador:UM|q[0], ;
+;                                              ;                           ; registrador:DS|q[3], registrador:DS|q[2], registrador:DS|q[1], registrador:DS|q[0], ;
+;                                              ;                           ; registrador:US|q[3], registrador:US|q[2], registrador:US|q[1], registrador:US|q[0], ;
+;                                              ;                           ; divisorGenerico:divisorGenerico|tick, divisorGenerico:divisorGenerico|contador[0],  ;
+;                                              ;                           ; divisorGenerico:divisorGenerico|contador[1],                                        ;
+;                                              ;                           ; divisorGenerico:divisorGenerico|contador[2],                                        ;
+;                                              ;                           ; divisorGenerico:divisorGenerico|contador[3]                                         ;
+; fsm_relogio:ROM|fstate.incrementa_DS_parteII ; Stuck at GND              ; fsm_relogio:ROM|fstate.zera_DS, fsm_relogio:ROM|fstate.conta_minuto                 ;
+;                                              ; due to stuck port clock   ;                                                                                     ;
++----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 36    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |diagrama_de_blocos_relogio|mux_6x1:mux_dos_registradores|Mux0 ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |diagrama_de_blocos_relogio|mux_6x1:mux_das_constantes|Mux3    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |diagrama_de_blocos_relogio|mux_6x1:mux_das_constantes|Mux3 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:divisorGenerico ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; divisor        ; 8     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -291,23 +342,14 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 82                          ;
-; cycloneiii_ff         ; 36                          ;
-;     ENA               ; 24                          ;
-;     plain             ; 12                          ;
-; cycloneiii_lcell_comb ; 101                         ;
-;     arith             ; 4                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 3                           ;
-;     normal            ; 97                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 18                          ;
-;         4 data inputs ; 65                          ;
+; boundary_port         ; 124                         ;
+; cycloneiii_lcell_comb ; 6                           ;
+;     normal            ; 6                           ;
+;         0 data inputs ; 2                           ;
+;         4 data inputs ; 4                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.30                        ;
-; Average LUT depth     ; 4.46                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -326,7 +368,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Tue Oct 02 10:48:23 2018
+    Info: Processing started: Tue Oct 02 15:22:57 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -356,32 +398,140 @@ Info (12021): Found 1 design units, including 1 entities, in source file diagram
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
     Info (12022): Found design unit 1: single_port_rom-rtl File: C:/Users/user/Documents/GitHub/Clock_descomp/ROM.vhd Line: 25
     Info (12023): Found entity 1: single_port_rom File: C:/Users/user/Documents/GitHub/Clock_descomp/ROM.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/user/Documents/GitHub/Clock_descomp/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/user/Documents/GitHub/Clock_descomp/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 4 design units, including 1 entities, in source file divisorgenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divPor2 File: C:/Users/user/Documents/GitHub/Clock_descomp/divisorGenerico.vhd Line: 15
+    Info (12022): Found design unit 2: divisorGenerico-divPotenciaDe2 File: C:/Users/user/Documents/GitHub/Clock_descomp/divisorGenerico.vhd Line: 29
+    Info (12022): Found design unit 3: divisorGenerico-divInteiro File: C:/Users/user/Documents/GitHub/Clock_descomp/divisorGenerico.vhd Line: 43
+    Info (12023): Found entity 1: divisorGenerico File: C:/Users/user/Documents/GitHub/Clock_descomp/divisorGenerico.vhd Line: 5
+Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/user/Documents/GitHub/Clock_descomp/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/user/Documents/GitHub/Clock_descomp/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/user/Documents/GitHub/Clock_descomp/edgeDetector.vhd Line: 4
 Info (12127): Elaborating entity "diagrama_de_blocos_relogio" for the top level hierarchy
 Warning (275011): Block or symbol "registrador" of instance "DS" overlaps another block or symbol
 Warning (275011): Block or symbol "registrador" of instance "DM" overlaps another block or symbol
 Info (12128): Elaborating entity "demux" for hierarchy "demux:demux_reg_enable"
 Info (12128): Elaborating entity "fsm_relogio" for hierarchy "fsm_relogio:ROM"
+Info (12128): Elaborating entity "edgeDetector" for hierarchy "edgeDetector:edgeDetector"
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:divisorGenerico"
 Info (12128): Elaborating entity "comp" for hierarchy "comp:comp_US"
 Info (12128): Elaborating entity "registrador" for hierarchy "registrador:US"
 Info (12128): Elaborating entity "ula" for hierarchy "ula:inst"
 Warning (10631): VHDL Process Statement warning at ula.vhd(40): inferring latch(es) for signal or variable "flag", which holds its previous value in one or more paths through the process File: C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd Line: 40
 Info (10041): Inferred latch for "flag" at ula.vhd(40) File: C:/Users/user/Documents/GitHub/Clock_descomp/ula.vhd Line: 40
 Info (12128): Elaborating entity "mux_6x1" for hierarchy "mux_6x1:mux_das_constantes"
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:conversor_7Seg_US"
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "reg_US_enable" is stuck at VCC
+    Warning (13410): Pin "reg_UH_enable" is stuck at GND
+    Warning (13410): Pin "reg_DH_enable" is stuck at GND
+    Warning (13410): Pin "reg_UM_enable" is stuck at GND
+    Warning (13410): Pin "reg_DS_enable" is stuck at GND
+    Warning (13410): Pin "reg_DM_enable" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[3]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX4[5]" is stuck at GND
+    Warning (13410): Pin "HEX4[4]" is stuck at GND
+    Warning (13410): Pin "HEX4[3]" is stuck at GND
+    Warning (13410): Pin "HEX4[2]" is stuck at GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
+    Warning (13410): Pin "HEX4[0]" is stuck at GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
+    Warning (13410): Pin "HEX5[2]" is stuck at GND
+    Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[0]" is stuck at GND
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC
+    Warning (13410): Pin "HEX6[5]" is stuck at GND
+    Warning (13410): Pin "HEX6[4]" is stuck at GND
+    Warning (13410): Pin "HEX6[3]" is stuck at GND
+    Warning (13410): Pin "HEX6[2]" is stuck at GND
+    Warning (13410): Pin "HEX6[1]" is stuck at GND
+    Warning (13410): Pin "HEX6[0]" is stuck at GND
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC
+    Warning (13410): Pin "HEX7[5]" is stuck at GND
+    Warning (13410): Pin "HEX7[4]" is stuck at GND
+    Warning (13410): Pin "HEX7[3]" is stuck at GND
+    Warning (13410): Pin "HEX7[2]" is stuck at GND
+    Warning (13410): Pin "HEX7[1]" is stuck at GND
+    Warning (13410): Pin "HEX7[0]" is stuck at GND
+    Warning (13410): Pin "out_mux_reg[3]" is stuck at GND
+    Warning (13410): Pin "out_mux_reg[2]" is stuck at GND
+    Warning (13410): Pin "out_mux_reg[1]" is stuck at GND
+    Warning (13410): Pin "out_mux_reg[0]" is stuck at GND
     Warning (13410): Pin "palavra_out[12]" is stuck at GND
     Warning (13410): Pin "palavra_out[11]" is stuck at GND
+    Warning (13410): Pin "palavra_out[10]" is stuck at GND
     Warning (13410): Pin "palavra_out[9]" is stuck at GND
+    Warning (13410): Pin "palavra_out[8]" is stuck at GND
+    Warning (13410): Pin "palavra_out[7]" is stuck at GND
+    Warning (13410): Pin "palavra_out[6]" is stuck at GND
+    Warning (13410): Pin "palavra_out[5]" is stuck at GND
+    Warning (13410): Pin "palavra_out[4]" is stuck at GND
+    Warning (13410): Pin "palavra_out[3]" is stuck at GND
+    Warning (13410): Pin "palavra_out[2]" is stuck at GND
+    Warning (13410): Pin "palavra_out[1]" is stuck at GND
+    Warning (13410): Pin "palavra_out[0]" is stuck at GND
+    Warning (13410): Pin "reg_dh[3]" is stuck at GND
+    Warning (13410): Pin "reg_dh[2]" is stuck at GND
+    Warning (13410): Pin "reg_dh[1]" is stuck at GND
+    Warning (13410): Pin "reg_dh[0]" is stuck at GND
+    Warning (13410): Pin "reg_dm[3]" is stuck at GND
+    Warning (13410): Pin "reg_dm[2]" is stuck at GND
+    Warning (13410): Pin "reg_dm[1]" is stuck at GND
+    Warning (13410): Pin "reg_dm[0]" is stuck at GND
+    Warning (13410): Pin "reg_ds[3]" is stuck at GND
+    Warning (13410): Pin "reg_ds[2]" is stuck at GND
+    Warning (13410): Pin "reg_ds[1]" is stuck at GND
+    Warning (13410): Pin "reg_ds[0]" is stuck at GND
+    Warning (13410): Pin "reg_uh[3]" is stuck at GND
+    Warning (13410): Pin "reg_uh[2]" is stuck at GND
+    Warning (13410): Pin "reg_uh[1]" is stuck at GND
+    Warning (13410): Pin "reg_uh[0]" is stuck at GND
+    Warning (13410): Pin "reg_um[3]" is stuck at GND
+    Warning (13410): Pin "reg_um[2]" is stuck at GND
+    Warning (13410): Pin "reg_um[1]" is stuck at GND
+    Warning (13410): Pin "reg_um[0]" is stuck at GND
+    Warning (13410): Pin "reg_us[3]" is stuck at GND
+    Warning (13410): Pin "reg_us[2]" is stuck at GND
+    Warning (13410): Pin "reg_us[1]" is stuck at GND
+    Warning (13410): Pin "reg_us[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 205 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK"
+    Warning (15610): No output dependent on input pin "v_9[0]"
+    Warning (15610): No output dependent on input pin "v_9[1]"
+    Warning (15610): No output dependent on input pin "v_9[2]"
+    Warning (15610): No output dependent on input pin "v_9[3]"
+Info (21057): Implemented 128 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
-    Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 123 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 5025 megabytes
-    Info: Processing ended: Tue Oct 02 10:48:44 2018
+    Info (21059): Implemented 99 output pins
+    Info (21061): Implemented 4 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 100 warnings
+    Info: Peak virtual memory: 5027 megabytes
+    Info: Processing ended: Tue Oct 02 15:23:18 2018
     Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:45
+    Info: Total CPU time (on all processors): 00:00:47
 
 
