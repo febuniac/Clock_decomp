@@ -22,7 +22,7 @@ agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 144 -56 312 -40)
+	(rect 176 -80 344 -64)
 	(text "INPUT" (rect 2 5 43 16)(font "Arial" (font_size 6)))
 	(text "CLK" (rect 139 2 163 16)(font "Arial" ))
 	(pt 0 8)
@@ -503,7 +503,7 @@ agreement for further details.
 	(output)
 	(rect -432 -352 -256 -336)
 	(text "OUTPUT" (rect 126 0 175 11)(font "Arial" (font_size 6)))
-	(text "HEX6[6..0]" (rect 5 0 88 14)(font "Arial" ))
+	(text "HEX6[6..0]" (rect 5 0 87 14)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -520,7 +520,7 @@ agreement for further details.
 	(output)
 	(rect -184 -352 -8 -336)
 	(text "OUTPUT" (rect 126 0 175 11)(font "Arial" (font_size 6)))
-	(text "HEX5[6..0]" (rect 5 0 88 14)(font "Arial" ))
+	(text "HEX5[6..0]" (rect 5 0 87 14)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -537,7 +537,7 @@ agreement for further details.
 	(output)
 	(rect 64 -352 240 -336)
 	(text "OUTPUT" (rect 126 0 175 11)(font "Arial" (font_size 6)))
-	(text "HEX4[6..0]" (rect 5 0 88 14)(font "Arial" ))
+	(text "HEX4[6..0]" (rect 5 0 87 14)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -554,7 +554,7 @@ agreement for further details.
 	(output)
 	(rect 312 -352 488 -336)
 	(text "OUTPUT" (rect 126 0 175 11)(font "Arial" (font_size 6)))
-	(text "HEX3[6..0]" (rect 5 0 88 14)(font "Arial" ))
+	(text "HEX3[6..0]" (rect 5 0 87 14)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -571,7 +571,7 @@ agreement for further details.
 	(output)
 	(rect 560 -352 736 -336)
 	(text "OUTPUT" (rect 126 0 175 11)(font "Arial" (font_size 6)))
-	(text "HEX2[6..0]" (rect 5 0 88 14)(font "Arial" ))
+	(text "HEX2[6..0]" (rect 5 0 87 14)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -1792,7 +1792,7 @@ agreement for further details.
 	(flipy)
 )
 (symbol
-	(rect -8 -80 144 0)
+	(rect -8 -64 144 16)
 	(text "divisorGenerico" (rect 24 0 147 14)(font "Arial" ))
 	(text "divisorGenerico" (rect 111 64 234 78)(font "Arial" ))
 	(port
@@ -1818,7 +1818,7 @@ agreement for further details.
 		(rectangle (rect 16 16 136 64))
 	)
 	(flipy)
-	(annotation_block (parameter)(rect 144 -88 152 -80))
+	(annotation_block (parameter)(rect 144 -72 152 -64))
 )
 (connector
 	(pt 352 528)
@@ -2991,26 +2991,6 @@ agreement for further details.
 	(pt 320 -104)
 )
 (connector
-	(pt -56 -48)
-	(pt -8 -48)
-)
-(connector
-	(pt -56 -32)
-	(pt -48 -32)
-)
-(connector
-	(pt -48 -32)
-	(pt -48 -88)
-)
-(connector
-	(pt -312 -88)
-	(pt -48 -88)
-)
-(connector
-	(pt -48 -88)
-	(pt -16 -88)
-)
-(connector
 	(pt 736 -288)
 	(pt 752 -288)
 	(bus)
@@ -3111,6 +3091,34 @@ agreement for further details.
 	(pt -32 320)
 	(bus)
 )
+(connector
+	(pt -312 -88)
+	(pt -16 -88)
+)
+(connector
+	(pt -56 -32)
+	(pt -8 -32)
+)
+(connector
+	(pt -56 -72)
+	(pt -56 -48)
+)
+(connector
+	(pt 144 -32)
+	(pt 160 -32)
+)
+(connector
+	(pt 160 -32)
+	(pt 160 -72)
+)
+(connector
+	(pt 176 -72)
+	(pt 160 -72)
+)
+(connector
+	(pt 160 -72)
+	(pt -56 -72)
+)
 (junction (pt 320 320))
 (junction (pt 320 208))
 (junction (pt 320 104))
@@ -3172,5 +3180,5 @@ agreement for further details.
 (junction (pt 552 512))
 (junction (pt -16 -88))
 (junction (pt -40 -104))
-(junction (pt -48 -88))
 (junction (pt -32 296))
+(junction (pt 160 -72))

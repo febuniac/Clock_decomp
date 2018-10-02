@@ -1,5 +1,6 @@
 |diagrama_de_blocos_relogio
 reg_US_enable <= demux:demux_reg_enable.A
+CLK => edgeDetector:edgeDetector.clk
 CLK => divisorGenerico:divisorGenerico.clk
 v_1[0] => mux_6x1:mux_das_constantes.A[0]
 v_1[1] => mux_6x1:mux_das_constantes.A[1]
