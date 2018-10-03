@@ -40,7 +40,7 @@ agreement for further details.
 	)
 	(parameter
 		"divisor"
-		"8"
+		"2"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing

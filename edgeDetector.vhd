@@ -13,21 +13,8 @@ begin
   process(clk)
   begin
         if rising_edge(clk) then
-            saidaQ <= entrada;
+            saidaQ <= 1;
         end if;
   end process;
   saida <= entrada and (not saidaQ);
-end  architecture;
-
-
-architecture bordaDescida of edgeDetector is
-    signal saidaQ : STD_LOGIC;
-begin
-  process(clk)
-  begin
-        if rising_edge(clk) then
-            saidaQ <= entrada;
-        end if;
-  end process;
-  saida <= (not entrada) and saidaQ;
 end  architecture;
