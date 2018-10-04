@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux_6x1 is
     Port ( SEL : in  STD_LOGIC_VECTOR (2 downto 0);
-           A,B,C,D,E,F   : in  STD_LOGIC_VECTOR (3 downto 0);
+           A,B,C,D,E,F,G   : in  STD_LOGIC_VECTOR (3 downto 0);
            Y             : out STD_LOGIC_VECTOR (3 downto 0));
 end mux_6x1;
 
@@ -24,6 +24,8 @@ begin
 			y <= E;
 		when "101" => 
 			y <= F;
+		when "110" => 
+			y <= G;
 		when others => 
 			y <= "0000";
 	end case;

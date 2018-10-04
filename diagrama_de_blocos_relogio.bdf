@@ -24,7 +24,7 @@ agreement for further details.
 	(input)
 	(rect 360 -504 528 -488)
 	(text "INPUT" (rect 125 0 166 11)(font "Arial" (font_size 6)))
-	(text "CLOCK_50" (rect 5 0 72 14)(font "Arial" ))
+	(text "CLOCK_50" (rect 5 0 71 14)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -492,7 +492,7 @@ agreement for further details.
 	(output)
 	(rect 1376 -192 1552 -176)
 	(text "OUTPUT" (rect 1 0 50 11)(font "Arial" (font_size 6)))
-	(text "HEX0[6..0]" (rect 88 0 171 14)(font "Arial" ))
+	(text "HEX0[6..0]" (rect 88 0 170 14)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -503,7 +503,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1496 -272 1592 -240))
+	(annotation_block (location)(rect 1408 -312 1504 -280))
 )
 (pin
 	(output)
@@ -520,7 +520,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1560 -296 1656 -264))
+	(annotation_block (location)(rect 1584 -168 1680 -136))
 )
 (symbol
 	(rect 256 -104 288 -88)
@@ -1659,7 +1659,7 @@ agreement for further details.
 		(pt 216 240)
 		(output)
 		(text "palavra[12..0]" (rect 0 0 115 14)(font "Arial" ))
-		(text "palavra[12..0]" (rect 98 231 195 245)(font "Arial" ))
+		(text "palavra[12..0]" (rect 98 231 213 245)(font "Arial" ))
 		(line (pt 216 240)(pt 200 240)(line_width 3))
 	)
 	(drawing
@@ -1731,7 +1731,7 @@ agreement for further details.
 		(pt 144 168)
 		(output)
 		(text "Y[3..0]" (rect 0 0 57 14)(font "Arial" ))
-		(text "Y[3..0]" (rect 135 99 149 147)(font "Arial" )(vertical))
+		(text "Y[3..0]" (rect 135 99 149 156)(font "Arial" )(vertical))
 		(line (pt 144 168)(pt 144 152)(line_width 3))
 	)
 	(drawing
@@ -1814,7 +1814,7 @@ agreement for further details.
 		(pt 152 32)
 		(output)
 		(text "saida_clk" (rect 0 0 74 14)(font "Arial" ))
-		(text "saida_clk" (rect 69 27 143 41)(font "Arial" ))
+		(text "saida_clk" (rect 69 27 131 41)(font "Arial" ))
 		(line (pt 152 32)(pt 136 32))
 	)
 	(parameter
@@ -2669,11 +2669,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 904 -160)
-	(pt 904 -112)
-	(bus)
-)
-(connector
 	(text "palavra[11..9]" (rect 916 353 930 468)(font "Arial" )(vertical))
 	(pt 944 608)
 	(pt 944 248)
@@ -3021,24 +3016,7 @@ agreement for further details.
 	(pt -16 -88)
 )
 (connector
-	(pt 888 -160)
-	(pt 888 -120)
-	(bus)
-)
-(connector
-	(text "V_QUATRO[3..0]" (rect 872 -58 886 57)(font "Arial" )(vertical))
-	(pt 888 -120)
-	(pt 888 8)
-	(bus)
-)
-(connector
-	(text "V_DOIS[3..0]" (rect 888 -44 902 55)(font "Arial" )(vertical))
-	(pt 904 -112)
-	(pt 904 8)
-	(bus)
-)
-(connector
-	(text "V_UM[3..0]" (rect 904 -30 918 52)(font "Arial" )(vertical))
+	(text "V_UM[3..0]" (rect 904 -142 918 -60)(font "Arial" )(vertical))
 	(pt 920 -184)
 	(pt 920 8)
 	(bus)
@@ -3226,7 +3204,7 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "V_OITO[3..0]" (rect 837 -47 851 52)(font "Arial" )(vertical))
+	(text "V_OITO[3..0]" (rect 837 -151 851 -52)(font "Arial" )(vertical))
 	(pt 856 -160)
 	(pt 856 8)
 	(bus)
@@ -3242,7 +3220,7 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "V_DEZ[3..0]" (rect 823 -45 837 45)(font "Arial" )(vertical))
+	(text "V_DEZ[3..0]" (rect 823 -141 837 -51)(font "Arial" )(vertical))
 	(pt 840 -136)
 	(pt 840 8)
 	(bus)
@@ -3294,17 +3272,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 872 -160)
-	(pt 872 -128)
-	(bus)
-)
-(connector
-	(text "V_SEIS[3..0]" (rect 853 -47 867 52)(font "Arial" )(vertical))
-	(pt 872 -128)
-	(pt 872 8)
-	(bus)
-)
-(connector
 	(pt -696 224)
 	(pt -696 256)
 	(bus)
@@ -3322,6 +3289,39 @@ agreement for further details.
 (connector
 	(pt -736 336)
 	(pt -736 560)
+	(bus)
+)
+(connector
+	(pt 888 -160)
+	(pt 888 -120)
+	(bus)
+)
+(connector
+	(text "V_QUATRO[3..0]" (rect 872 -146 886 -31)(font "Arial" )(vertical))
+	(pt 888 -120)
+	(pt 888 8)
+	(bus)
+)
+(connector
+	(pt 872 -160)
+	(pt 872 -128)
+	(bus)
+)
+(connector
+	(text "V_SEIS[3..0]" (rect 853 -159 867 -60)(font "Arial" )(vertical))
+	(pt 872 -128)
+	(pt 872 8)
+	(bus)
+)
+(connector
+	(pt 904 -160)
+	(pt 904 -112)
+	(bus)
+)
+(connector
+	(text "V_DOIS[3..0]" (rect 888 -140 902 -41)(font "Arial" )(vertical))
+	(pt 904 -112)
+	(pt 904 8)
 	(bus)
 )
 (junction (pt 320 320))
